@@ -1,14 +1,14 @@
 // ITERATION 1
 
 // Suspects Collection
-const suspectsArray = [ {
-    firstName: "Jacob" ,
+const suspectsArray = [{
+    firstName: "Jacob",
     lastName: "Green",
     occupation: "Entrepreneur",
-    age: 45 ,
+    age: 45,
     description: "He has a lot of connections",
-    image: "https://pbs.twimg.com/profile_images/506787499331428352/65jTv2uC.jpeg" ,
-    color: "green" ,
+    image: "https://pbs.twimg.com/profile_images/506787499331428352/65jTv2uC.jpeg",
+    color: "green",
 }, 
 {
     firstName: "Doctor",
@@ -18,7 +18,7 @@ const suspectsArray = [ {
     description: "PhD in plant toxicology. Adopted daughter of Mr. Boddy",
     image: "http://www.radiotimes.com/uploads/images/Original/111967.jpg",
     color: "white",
-} ,
+},
 {
     firstName: "Victor",
     lastName: "Plum",
@@ -52,7 +52,7 @@ color: "red",
     age: 62,
     description: "He is a former football player who tries to get by on his former glory",
     image: "https://static.independent.co.uk/s3fs-public/thumbnails/image/2016/07/04/08/unspecified-3.jpg",
-    color: "yellow" ,
+    color: "yellow",
 }
 ]
 
@@ -86,26 +86,24 @@ const weaponsArray = [{name: "rope", weight:10},
  {name: "pistol" , weight: 20 },
 ]
 
+
 // ITERATION 2
  
-function randomElement (randomArray){
-    return randomArray[Math.floor (Math.random() * (randomArray.length )) + 0];
+function selectRandom (randomArr){
+    let randomElement = randomArr[Math.floor (Math.random() * (randomArr.length))];
+    return randomElement
     }
-    let pet = ["cat", "perro", "oso"];
-   
-    console.log(randomElement(pet))
 
-    //parte 2
-
-
+ //parte 2
    
      function pickMystery () {
-        let cards = [suspectsArray,weaponsArray,roomsArray]
-        let cardsFinal= []
-         for (i=0; i<3;i++){
-            push(randomElement(cards[i]))
-         }
-
-     }
+       let randomCards = {}
+       randomCards.suspect = selectRandom (suspectsArray)
+       randomCards.room = selectRandom (roomsArray)
+       randomCards.weapon = selectRandom (weaponsArray)
+       return randomCards
+     };
 
 // ITERATION 3
+
+
