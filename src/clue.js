@@ -1,5 +1,4 @@
 // ITERATION 1
-
 // Suspects Collection
 const suspectsArray = [{
     firstName: "Jacob",
@@ -9,7 +8,7 @@ const suspectsArray = [{
     description: "He has a lot of connections",
     image: "https://pbs.twimg.com/profile_images/506787499331428352/65jTv2uC.jpeg",
     color: "green",
-}, 
+},
 {
     firstName: "Doctor",
     lastName: "Orchid",
@@ -55,8 +54,6 @@ color: "red",
     color: "yellow",
 }
 ]
-
-
 // Rooms Collection
 const roomsArray = [ "Dining Room",
 "Conservatory",
@@ -72,10 +69,9 @@ const roomsArray = [ "Dining Room",
 "Observatory",
 "Theater",
 "Guest House",
-"Patio"] 
-
+"Patio"]
 // Weapons Collection
-const weaponsArray = [{name: "rope", weight:10}, 
+const weaponsArray = [{name: "rope", weight:10},
 {name: "knife" , weight: 8},
  {name: "candlestick" , weight: 2},
  {name: "dumbbell" , weight: 30},
@@ -85,17 +81,12 @@ const weaponsArray = [{name: "rope", weight:10},
  {name: "trophy" , weight: 25},
  {name: "pistol" , weight: 20 },
 ]
-
-
 // ITERATION 2
- 
 function selectRandom (randomArr){
     let randomElement = randomArr[Math.floor (Math.random() * (randomArr.length))];
     return randomElement
     }
-
  //parte 2
-   
      function pickMystery () {
        let randomCards = {}
        randomCards.suspect = selectRandom (suspectsArray)
@@ -103,7 +94,8 @@ function selectRandom (randomArr){
        randomCards.weapon = selectRandom (weaponsArray)
        return randomCards
      };
-
 // ITERATION 3
-
-
+function revealMystery () {
+  let randomSelection = pickMystery ()
+  return `${randomSelection.suspect.firstName} ${randomSelection.suspect.lastName} killed Mr. Boddy using the ${randomSelection.weapon.name} in the ${randomSelection.room}!`
+}
